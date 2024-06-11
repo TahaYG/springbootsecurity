@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Edit Book</title>
+</head>
+
+<body>
+<div class="container-fluid" align="center">
+    <h1>Edit book </h1>
+    <br />
+    <form action="#" th:action="@{/Book/edit/{id}(id=${book.id})}" th:object="${book}" method="post">
+
+
+    <table border="0" cellpadding="10">
+            <tr>
+
+                <td><input type="hidden" th:field="*{id}" required /></td>
+            </tr>
+            <tr>
+                <td>Book Name:</td>
+                <td><input type="text" th:field="*{name}"  required/></td>
+            </tr>
+            <tr>
+                <td>Title:</td>
+                <td><input type="text" th:field="*{title}" /></td>
+            </tr>
+            <tr>
+                <td>publisher:</td>
+                <td><input type="text" th:field="*{publisher}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save </button> </td>
+
+
+                <td colspan="2"><button onclick="cancelform()" type="submit">Cancel</button> </td>
+            </tr>
+
+
+
+        </table>
+
+    </form>
+</div>
+<script type="text/javascript">
+    function cancelform(){
+        window.location='/Book';
+    }
+
+</script>
+</body>
+</html>

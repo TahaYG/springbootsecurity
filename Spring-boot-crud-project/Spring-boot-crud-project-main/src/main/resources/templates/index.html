@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Publisher Site</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+
+        body {
+            background-image: url('/anasayfa.png');
+            background-size: cover;
+        }
+        .container-fluid
+        {
+            color: #c28d0a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid text-center">
+    <h1>Welcome to the Publisher </h1>
+    <br>
+    <br>
+    <div><a class ="h2 " th:href="@{/Book}"> Book</a></div>
+    <div> <a class ="h2 " th:href="@{/Author}"> Author</a></div>
+    <div> <a class ="h2 " th:href="@{/publishes}"> Publish</a></div>
+    <div> <a class ="h2 " th:href="@{/users}"> Users</a></div>
+
+
+
+
+
+</div>
+</body>
+</html>
